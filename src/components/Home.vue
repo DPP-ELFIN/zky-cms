@@ -14,7 +14,9 @@
     </mt-swipe>
 
     <!-- 天气 -->
-    <div id="he-plugin-simple"></div>
+    <keep-alive>
+      <div id="he-plugin-simple"></div>
+    </keep-alive>
     <!-- 天气 -->
 
     <!-- 九宫格-->

@@ -50,14 +50,9 @@
             // 通过 `vm` 访问组件实例 vm就是当前的this
             vm.myTitle = title
           })
-        }
-    /* created(){
-       let _footer = this.$store.state.footerVisible;
-       if (!_footer) {
-         this.$store.commit('TOGGLE_FOOTER');
-       }
-       this.$store.commit('SELECT_TAB', 'my')
-     } */
+        },
+    created(){
+     }
   }
 </script>
 <style scoped>

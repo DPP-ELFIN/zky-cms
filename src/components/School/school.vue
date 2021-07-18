@@ -236,7 +236,7 @@
             .catch(err=>console.log(err)); */
         },
          beforeRouteEnter(to, from, next) {
-              console.log(to)
+              //console.log(to)
               let title = '详情';
               if (to.name == 'School') {
                 title = '校园'

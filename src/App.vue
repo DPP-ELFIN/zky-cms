@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-   <!-- <my-head :title="myTitle"></my-head> -->
+    <!-- <my-head :title="myTitle"></my-head> -->
     <router-view />
 
     <!-- 底部 -->
@@ -23,6 +23,8 @@
       </mt-tab-item>
     </mt-tabbar>
     <!-- 底部 -->
+
+
   </div>
 </template>
 
@@ -41,23 +43,29 @@
         this.$router.push({
           name: newVal
         })
-        /* if (newVal == 'Home') {
-          this.title = '湛江科技学院信息管理系统'
-        }
-        if (newVal == 'School') {
-          this.title = '校园资讯'
-        }
-        if (newVal == 'Map') {
-          this.title = '地图'
-        }
-        if (newVal == 'Self') {
-          this.title = '个人中心'
-        } */
       }
     },
+
     created() {
       this.selected = 'Home'
-      // window.title = ''
+      //console.log(!this.$store.state.token)
+      let token = this.$store.state.token
+      if (!token) {
+       this.$messagebox({
+          title: '提示',
+          message: '您还为登录，是否前往登录',
+          showCancelButton: true,
+          confirmButtonText: "确定",
+        }).then(active=>{
+            //console.log(active)
+            if(active === 'confirm'){
+              this.$router.push({
+                name:'loginAndRegist'
+              })
+            }
+        })
+      }
+
     },
 
   }

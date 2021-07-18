@@ -8,7 +8,7 @@ import EduSys from '@/components/EduSys/eduSys.vue'
 import Lib from '@/components/Lib/Lib.vue'
 import schoolDetail from '@/components/School/schoolDetail.vue'
 import Myinfo from '@/components/Self/my/myinfo.vue'
-
+import loginAndRegist from '@/components/loginAndRegist/loginAndRegist.vue'
 
 
 Vue.use(Router)
@@ -62,5 +62,10 @@ export default new Router({
      name: 'schoolDetail',
      component: schoolDetail
    },
+   {
+     path:'/loginAndRegist',
+     name:'loginAndRegist',
+     component:loginAndRegist
+   }
   ]
 })
